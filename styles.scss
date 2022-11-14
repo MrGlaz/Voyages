@@ -1,0 +1,184 @@
+html, body, div, span, h1, h2, h3, h4, a, p, img, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
+@font-face {
+    font-family:"AustraliaCustom";
+    src: url(Fonts/Australia-Custom.ttf);
+}
+
+@font-face {
+    font-family:"Mattone";
+    src: url(Fonts/Mattone-150.otf);
+}
+
+body{
+    height: 100vh;
+}
+
+
+.border{
+    border: 1px solid black;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100%;
+    position: relative;
+    }
+    
+    .nav {
+        grid-area: 1 / 1 / 2 / 13;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .logo{
+            font-family: "Mattone";
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+        .burger{
+            height: 10px;
+            width: 30px;
+            position: absolute;
+            right: 60px;
+            cursor: pointer;
+
+            &:before{
+                content: "";
+                height: 3px;
+                width: 100%;
+                background: black;
+                position: absolute;
+                top:0px;
+                right: 0px;
+            }
+
+            &:after{
+                content: "";
+                height: 3px;
+                width: 100%;
+                background: black;
+                position: absolute;
+                bottom:0px;
+                right: 0px;
+            }
+        }
+    }
+
+    .side-left {
+        grid-area: 2 / 1 / 8 / 3;
+        font-family:"AustraliaCustom";
+        font-size: 12vh;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        line-height: 2.3;
+        text-align: center;
+    }
+
+    .main {
+        grid-area: 2 / 3 / 8 / 9;
+        background-image: url("assets/love-dress-white-04.jpeg");
+        background-position: top;
+        background-size: cover;
+    }
+
+    .photo-right{
+        position: absolute;
+        display: block;
+        background-image: url("assets/love-dress-white-02.jpeg");
+        background-position: top;
+        background-size: cover;
+        height: 250px;
+        width: 40%;
+        top: 20%;
+        right: 0;
+    }
+
+    .side-right {
+        grid-area: 2 / 9 / 8 / 13;
+        display: flex;
+        justify-content: center;
+    
+
+        .preorder-wp{
+            margin-top: 20rem;
+            position:relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        
+            .svg{
+                display: block;
+                position: absolute;
+                width: 287px;
+                height: 113px;
+                top: 106px;
+                left: -60px;
+            }
+        }
+
+        .arrow{
+            width: 50px;
+            height: 1px;
+            background: black;
+            position: relative;
+
+            &:after{
+                content:"";
+                width: 8px;
+                height: 8px;
+                position: absolute;
+                border-right: 1px solid black;
+                border-top: 1px solid black;
+                top: -4px;
+                right: 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+
+    .footer-media {
+        grid-area: 8 / 1 / 9 / 9;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .date{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .a-style{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .footer-title {
+        grid-area: 8 / 9 / 9 / 13;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .point{
+            display: block;
+            background: black;
+            height: 12px;
+            width: 12px;
+            border-radius: 10px;
+        }
+    }
